@@ -29,6 +29,10 @@
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	text-align: center;
+
+	@include mediaMax(427px) {
+		font-size: 14px;
+	}
 }
 
 .modal {
@@ -37,8 +41,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 
-	width: 360px;
-	min-height: 586px;
+	width: 408px;
 	padding-top: 72px;
 	padding-bottom: var(--main-gap);
 	padding-left: var(--main-gap);
@@ -55,13 +58,9 @@
 			transform: translate(-50%, -50%) scale(1.1);
 		}
 
-	@include mediaMin(392px) {
-			width: 392px;
-		}
-
-	@include mediaMin(768px) {
-			width: 408px;
-		}
+	@include mediaMax(427px) {
+		width: 95%;
+	}
 }
 
 .modal .close-btn {
@@ -156,13 +155,10 @@
 }
 
 .modal-checkbox-container {
-	margin-top: 16px;
-}
-
-.modal-checkbox-label {
 	position: relative;
-
+	
 	padding-left: 24px;
+	margin-top: 16px;
 }
 
 .modal-checkbox-txt {

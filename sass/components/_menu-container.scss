@@ -21,8 +21,11 @@
         z-index: 999;
         transform: translateX(-140%);
 
+        display: flex;
+        flex-flow: column;
         width: 100%;
-        padding: 40px;
+        height: 100vh;
+        padding: 80px 40px 40px 40px;
 
         background-color: var(--main-light-bg-cl);
 
@@ -42,12 +45,19 @@
     }
 
     .menu-container .close-btn {
-        margin-left: auto;
-        margin-bottom: 16px;
+        position: absolute;
+        top: 40px;
+        right: 40px;
 
         opacity: 0;
 
         transition: opacity var(--trans-properties) 250ms;
+    }
+
+    .menu-container .soc-media{
+        @include mediaMax(427px) {
+            gap: 26px;
+        }
     }
 
     .menu-container .soc-media-icon {

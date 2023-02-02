@@ -1,9 +1,12 @@
 @include mediaMax(767px) {
+    .address {
+        margin-bottom: 48px;
+    }
+
     .address-list {
         display: flex;
         flex-direction: column-reverse;
         row-gap: 40px;
-        margin-bottom: 48px;
     }
 
     .address-link-mob-gray {
@@ -15,6 +18,10 @@
     }
 
     .address-link-mob-iris {
+        @include mediaMax(427px) {
+            font-size: 25px;
+        }
+
         color: var(--primary-brand);
         font-weight: 600;
         font-size: 36px;
@@ -46,7 +53,7 @@
     @include mediaMin(1200px) {
             display: block;
             height: 100%;
-            padding-top: 24px;
-            padding-bottom: 24px;
+
+            @include headerLinksGeometry($pb: 28px);
     }
 }

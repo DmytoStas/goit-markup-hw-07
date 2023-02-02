@@ -1,9 +1,3 @@
-@include mediaMin(1200px) {
-    .subscr-form {
-        margin-left: auto;
-    }
-}
-
 @include mediaMin(768px) {
     .subscr-form-elements {
         display: flex;

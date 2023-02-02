@@ -1,5 +1,15 @@
 .logo {
-    @extend %headerLinksGeometry;
+    height: 100%;
+
+    @include headerLinksGeometry();
+
+    @include mediaMin(768px) {
+        @include headerLinksGeometry($pb: 22px);
+    }
+
+    @include mediaMin(1200px) {
+        @include headerLinksGeometry($pb: 28px);
+    }
 
     color: var(--primary-brand);
     font-family: 'Raleway';
@@ -15,10 +25,5 @@
 
     @include mediaMin(768px) {
         line-height: 1.17;
-    }
-
-    @include mediaMin(1200px) {
-        display: inline-flex;
-        align-items: center;
     }
 }

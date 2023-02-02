@@ -3,7 +3,7 @@
     padding-bottom: $pb;
 }
 
-@mixin container($ml: auto, $mr: auto, $pr: 16px, $pl: $pr) {
+@mixin container($ml: auto, $mr: auto, $pr: 15px, $pl: $pr) {
     margin-left: $ml;
     margin-right: $mr;
     padding-right: $pr;
@@ -39,4 +39,9 @@
     screen and (min-resolution: 2dppx) and (min-width: $width) {
         @content;
     }
+}
+
+@mixin headerLinksGeometry($pt: 24px, $pb: 24px) {
+    padding-top: $pt;
+    padding-bottom: $pb;
 }

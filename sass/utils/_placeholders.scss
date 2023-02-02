@@ -8,13 +8,11 @@
 }
 
 %modalText {
+    @include mediaMax(427px) {
+        font-size: 10px;
+    }
+
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.04em;
-}
-
-%headerLinksGeometry {
-    height: 100%;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }

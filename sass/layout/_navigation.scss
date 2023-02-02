@@ -1,5 +1,10 @@
 .nav {
+
+    @include mediaMax(767px) {
+    margin-bottom: auto;
+    }
     @include mediaMin(768px) {
+        height: 100%;
         margin-right: 118px;
     }
 
@@ -15,7 +20,6 @@
     @include mediaMax(767px) {
         flex-direction: column;
         row-gap: 40px;
-        margin-bottom: 284px;
     
         color: var(--main-dark-txt-cl);
         font-weight: 700;
@@ -44,22 +48,18 @@
 
 @include mediaMin(768px) {
     &::after {
-            content: '';
-    
-            position: absolute;
-            bottom: 1px;
-    
-            display: block;
-            width: 100%;
-            height: 4px;
-    
-            background: var(--hover-bg);
-            border-radius: 2px;
+        content: '';
 
-            @include mediaMin(1200px) {
-                bottom: -2px;
-            }
-        }
+        position: absolute;
+        bottom: -1px;
+
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        background: var(--hover-bg);
+        border-radius: 2px;
+    }
 }
 }
 
@@ -69,7 +69,11 @@
     @include mediaMin(768px) {
         height: 100%;
         padding-top: 24px;
-        padding-bottom: 24px;
+        padding-bottom: 22px;
+    }
+
+    @include mediaMin(1200px) {
+        padding-bottom: 28px;
     }
 
     transition: color var(--trans-properties);
