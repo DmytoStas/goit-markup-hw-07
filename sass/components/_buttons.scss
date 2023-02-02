@@ -1,0 +1,53 @@
+.main-btn {
+    display: block;
+    margin: auto;
+    min-width: 165px;
+    padding: 16px 32px;
+
+    color: var(--main-light-txt-cl);
+    @extend %buttonsText;
+
+    background: var(--primary-brand);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+
+    transition: background-color var(--trans-properties),
+        box-shadow var(--trans-properties);
+        
+    &:hover,
+    &:focus {
+            background-color: var(--hover-bg);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+}
+
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+
+    color: var(--cross-icon-cl);
+    font-size: 0;
+
+    background-color: var(--third-light-cl);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    transition: background-color var(--trans-properties);
+    
+    &:hover,
+    &:focus {
+            color: var(--main-light-bg-cl);
+            background-color: var(--hover-bg);
+        }
+}
+
+
+.close-btn .cross-icon {
+    fill: currentColor;
+}

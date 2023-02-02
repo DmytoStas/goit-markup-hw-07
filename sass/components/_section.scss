@@ -1,0 +1,7 @@
+.section {
+    @include section();
+
+    @include mediaMin(1200px) {
+        @include section(120px);
+    }
+}

@@ -1,0 +1,42 @@
+@mixin section($pt: 96px, $pb: $pt) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin container($ml: auto, $mr: auto, $pr: 16px, $pl: $pr) {
+    margin-left: $ml;
+    margin-right: $mr;
+    padding-right: $pr;
+    padding-left: $pl;
+}
+
+@mixin mediaMax($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin mediaMin($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin mediaHeroBgImgMax($width) {
+    @media screen and (min-device-pixel-ratio: 2) and (max-width: $width),
+        screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: $width),
+        screen and (min-resolution: 192dpi) and (max-width: $width),
+        screen and (min-resolution: 2dppx) and (max-width: $width) {
+            @content;
+        }
+}
+
+@mixin mediaHeroBgImgMin($width) {
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: $width),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $width),
+    screen and (min-resolution: 192dpi) and (min-width: $width),
+    screen and (min-resolution: 2dppx) and (min-width: $width) {
+        @content;
+    }
+}

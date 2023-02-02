@@ -14,51 +14,132 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Portfolio</title>
   </head>
   <body>
     <!-- Блок хедер -->
     <header class="header">
-      <div class="container main-nav">
-        <nav class="nav">
-          <!-- Логотип -->
-          <a href="./index.html" class="logo"
-            ><span class="accent">Web</span>Studio</a
+      <div class="header-container container">
+        <!-- Логотип -->
+        <a class="logo" href="./index.html"
+          >Web<span class="logo-accent">Studio</span></a
+        >
+        <!-- Кнопка відкриття меню -->
+        <button
+          class="open-menu-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="burger-icon"
+            width="32"
+            height="22"
+            aria-label="Open menu button"
           >
+            <use href="./img/sprite.svg#burger"></use>
+          </svg>
+        </button>
 
-          <ul class="nav-list list">
-            <li class="item">
-              <a href="./index.html" class="nav-link">Studio</a>
-            </li>
-
-            <li class="item current-item">
-              <a href="./portfolio.html" class="nav-link current-link"
-                >Portfolio</a
+        <!-- Головна навігація сайту -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <nav class="nav">
+            <!-- Кнопка закриття меню -->
+            <button class="close-btn js-close-menu" type="button">
+              <svg
+                class="cross-icon"
+                width="8"
+                height="8"
+                aria-label="Close menu button"
               >
+                <use href="./img/sprite.svg#close"></use>
+              </svg>
+            </button>
+
+            <ul class="nav-list list">
+              <li class="nav-list-item">
+                <a class="nav-list-link" href="./index.html">Studio</a>
+              </li>
+
+              <li class="nav-list-item current-item">
+                <a class="nav-list-link current-link" href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+
+              <li class="nav-list-item">
+                <a class="nav-list-link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="address">
+            <ul class="address-list list">
+              <li class="address-list-item">
+                <a
+                  class="address-list-link address-link-mob-gray"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="address-list-item">
+                <a
+                  class="address-list-link address-link-mob-iris"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <!-- Соціальні мережі мобільного меню -->
+          <ul class="soc-media list">
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Instagram link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="item">
-              <a href="#" class="nav-link">Contacts</a>
+            <li class="soc-media-item">
+              <a class="soc-media-link" href="#" aria-label="Twitter link icon">
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Facebook link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Linkedin link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </nav>
-
-        <address class="address">
-          <ul class="address-list list">
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="address-link"
-                >info@devstudio.com</a
-              >
-            </li>
-
-            <li class="item">
-              <a href="tel:+110001111111" class="address-link"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        </div>
       </div>
     </header>
 
@@ -95,15 +176,70 @@
           <!-- Картки з роботами -->
 
           <ul class="cards-list cards-set list">
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-1_descktop_360.jpg"
-                    alt="Screenshots of application"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-1_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-1_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-1_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-1_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-1_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-1_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-1_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-1_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-1_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-1_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-1_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-1_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-1_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
+
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -112,7 +248,8 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+
+                <div class="card-content">
                   <h2 class="section-subtitle">
                     Banking App Interface Concept
                   </h2>
@@ -121,15 +258,69 @@
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-2_descktop_360.jpg"
-                    alt="Contactless payment by phone"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-2_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-2_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-2_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-2_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-2_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-2_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-2_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-2_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-2_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-2_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-2_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-2_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-2_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -138,22 +329,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Cashless Payment</h2>
                   <p class="section-descr">Marketing</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-3_descktop_360.jpg"
-                    alt="A picture of a mobile phone and a laptop"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-3_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-3_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-3_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-3_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-3_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-3_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-3_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-3_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-3_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-3_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-3_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-3_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-3_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -162,22 +407,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Meditaion App</h2>
                   <p class="section-descr">App</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-4_descktop_360.jpg"
-                    alt="Photo of the interior of the car"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-4_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-4_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-4_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-4_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-4_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-4_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-4_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-4_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-4_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-4_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-4_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-4_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-4_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -186,22 +485,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Taxi Service</h2>
                   <p class="section-descr">Marketing</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-5_descktop_360.jpg"
-                    alt="Screenshots of the smartphone screen"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-5_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-5_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-5_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-5_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-5_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-5_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-5_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-5_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-5_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-5_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-5_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-5_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-5_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -210,22 +563,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Screen Illustrations</h2>
                   <p class="section-descr">Design</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-6_descktop_360.jpg"
-                    alt="A woman in an orange sweater, hat and glasses takes a selfie"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-6_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-6_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-6_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-6_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-6_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-6_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-6_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-6_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-6_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-6_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-6_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-6_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-6_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -234,22 +641,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Online Courses</h2>
                   <p class="section-descr">Marketing</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-7_descktop_360.jpg"
-                    alt="Screenshots of the concept of Instagram stories"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-7_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-7_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-7_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-7_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-7_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-7_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-7_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-7_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-7_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-7_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-7_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-7_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-7_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -258,22 +719,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Instagram Stories Concept</h2>
                   <p class="section-descr">Design</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-8_descktop_360.jpg"
-                    alt="The person holds a mesh bag with fruit in his hand"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-8_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-8_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-8_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-8_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-8_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-8_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-8_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-8_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-8_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-8_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-8_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-8_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-8_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -282,22 +797,76 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Organic Food</h2>
                   <p class="section-descr">Web Site</p>
                 </div>
               </a>
             </li>
 
-            <li class="item items-set">
-              <a href="#" class="card">
+            <li class="card items-set">
+              <a href="#" class="card-link">
                 <div class="card-thumb">
-                  <img
-                    src="./img/portfolio/portfolio-9_descktop_360.jpg"
-                    alt="The person prepares coffee"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-9_mobile_396.webp    1x,
+                        ./img/portfolio/mobile/portfolio-9_mobile_792@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-9_desktop_360.webp    1x,
+                        ./img/portfolio/desktop/portfolio-9_desktop_720@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-9_tablet_356.webp    1x,
+                        ./img/portfolio/tablet/portfolio-9_tablet_712@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/portfolio-9_mobile_396.jpg    1x,
+                        ./img/portfolio/mobile/portfolio-9_mobile_792@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/portfolio-9_desktop_360.jpg    1x,
+                        ./img/portfolio/desktop/portfolio-9_desktop_720@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/portfolio-9_tablet_356.jpg    1x,
+                        ./img/portfolio/tablet/portfolio-9_tablet_712@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio/mobile/portfolio-9_mobile_396.jpg"
+                      alt="Screenshots of application"
+                    />
+                  </picture>
                   <div class="card-overlay">
                     <p class="card-overlay-txt">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -306,7 +875,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="item-content">
+                <div class="card-content">
                   <h2 class="section-subtitle">Fresh Coffee</h2>
                   <p class="section-descr">Web Site</p>
                 </div>
@@ -318,12 +887,12 @@
     </main>
 
     <!-- Підвал сайту -->
-    <footer class="footer">
-      <div class="container main-footer">
+    <footer class="footer section">
+      <div class="footer-container container">
         <div>
           <!-- Логотип -->
-          <a href="./index.html" class="footer-logo"
-            ><span class="accent">Web</span>Studio</a
+          <a href="./index.html" class="logo"
+            >Web<span class="logo-accent">Studio</span></a
           >
           <p class="footer-descr">
             Increase the flow of customers and sales for your business with
@@ -332,37 +901,49 @@
         </div>
 
         <!-- Соціальні мережі -->
-        <div class="footer-soc">
+        <div class="soc-media-container">
           <h2 class="section-descr">Social media</h2>
-          <ul class="social-link-list list">
-            <li class="item">
-              <a class="social-link" href="#" aria-label="Instagram link icon">
-                <svg class="social-icon">
-                  <use href="./img/icons.svg#instagram"></use>
+          <ul class="soc-media list">
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Instagram link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item">
-              <a class="social-link" href="#" aria-label="Twitter link icon">
-                <svg class="social-icon">
-                  <use href="./img/icons.svg#twitter"></use>
+            <li class="soc-media-item">
+              <a class="soc-media-link" href="#" aria-label="Twitter link icon">
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item">
-              <a class="social-link" href="#" aria-label="Facebook link icon">
-                <svg class="social-icon">
-                  <use href="./img/icons.svg#facebook"></use>
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Facebook link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item">
-              <a class="social-link" href="#" aria-label="Linkedin link icon">
-                <svg class="social-icon">
-                  <use href="./img/icons.svg#linkedin"></use>
+            <li class="soc-media-item">
+              <a
+                class="soc-media-link"
+                href="#"
+                aria-label="Linkedin link icon"
+              >
+                <svg class="soc-media-icon">
+                  <use href="./img/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -370,16 +951,12 @@
         </div>
 
         <!-- Форма для підписки -->
-        <form
-          class="footer-subscr-form"
-          name="footer-subscr-form"
-          autocomplete="on"
-        >
+        <form class="subscr-form" name="subscr-form" autocomplete="on">
           <h2 class="section-descr">Subscribe</h2>
-          <div class="form-elements">
+          <div class="subscr-form-elements">
             <label>
               <input
-                class="footer-email-input"
+                class="email-input"
                 type="email"
                 name="email"
                 placeholder="E-mail"
@@ -387,13 +964,21 @@
             </label>
             <button class="main-btn" type="submit">
               Subscribe
-              <svg class="send-icon">
-                <use href="./img/icons.svg#send"></use>
+              <svg class="send-icon" width="24" height="24">
+                <use href="./img/sprite.svg#send"></use>
               </svg>
             </button>
           </div>
         </form>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile_menu.js"></script>
   </body>
 </html>

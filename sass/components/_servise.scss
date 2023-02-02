@@ -1,0 +1,10 @@
+@include mediaMax(1199px) {
+    .service {
+        display: none;
+    }
+}
+
+.service-list {
+    flex-wrap: nowrap;
+    row-gap: 0;
+}

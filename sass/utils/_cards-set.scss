@@ -1,0 +1,11 @@
+@include mediaMin(768px) {
+    .cards-set {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px var(--main-gap);
+    }
+    
+    .items-set {
+        flex-basis: calc((100% - (var(--items) - 1) * var(--main-gap)) / var(--items));
+    }
+}

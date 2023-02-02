@@ -1,0 +1,19 @@
+.portfolio.section {
+    @include mediaMax(767px) {
+        @include section(48px);
+    }
+
+    @include mediaMin(768px) {
+        @include mediaMax(1199px) {
+            @include section();
+            padding-top: 64px;
+        }
+    }
+
+    @include mediaMin(1200px) {
+        @include section($pb: 120px);
+    }
+}
+
+@import './filter-btn',
+'./portfolio-cads-grid';

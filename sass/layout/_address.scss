@@ -1,0 +1,52 @@
+@include mediaMax(767px) {
+    .address-list {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .address-link-mob-gray {
+        color: var(--second-dark-txt-cl);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+    .address-link-mob-iris {
+        color: var(--primary-brand);
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 1.11;
+    }
+}
+
+.address-list {
+    @include mediaMin(768px) {
+        color: var(--second-dark-txt-cl);
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+    }
+
+    @include mediaMin(1200px) {
+        display: flex;
+        column-gap: 40px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+}
+
+.address-list-link {
+    transition: color var(--trans-properties);
+    
+    @include mediaMin(1200px) {
+            display: block;
+            height: 100%;
+            padding-top: 24px;
+            padding-bottom: 24px;
+    }
+}
