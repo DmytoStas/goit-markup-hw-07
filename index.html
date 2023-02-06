@@ -31,13 +31,9 @@
           type="button"
           aria-expanded="false"
           aria-controls="mobile-menu"
+          aria-label="Open menu button"
         >
-          <svg
-            class="burger-icon"
-            width="32"
-            height="22"
-            aria-label="Open menu button"
-          >
+          <svg class="burger-icon" width="32" height="22">
             <use href="./img/sprite.svg#burger"></use>
           </svg>
         </button>
@@ -46,13 +42,12 @@
         <div class="menu-container js-menu-container" id="mobile-menu">
           <nav class="nav">
             <!-- Кнопка закриття меню -->
-            <button class="close-btn js-close-menu" type="button">
-              <svg
-                class="cross-icon"
-                width="8"
-                height="8"
-                aria-label="Close menu button"
-              >
+            <button
+              class="close-btn js-close-menu"
+              type="button"
+              aria-label="Close menu button"
+            >
+              <svg class="cross-icon" width="8" height="8">
                 <use href="./img/sprite.svg#close"></use>
               </svg>
             </button>
@@ -161,7 +156,7 @@
           <h2 class="section-title visually-hidden">Our advantages</h2>
           <ul class="benefits-list cards-set list">
             <li class="benefits-list-item items-set">
-              <div class="benefits-icon-thumb" aria-label="Antenna icon">
+              <div class="benefits-icon-thumb">
                 <svg class="benefits-icon">
                   <use href="./img/sprite.svg#antenna"></use>
                 </svg>
@@ -174,7 +169,7 @@
             </li>
 
             <li class="benefits-list-item items-set">
-              <div class="benefits-icon-thumb" aria-label="Clock icon">
+              <div class="benefits-icon-thumb">
                 <svg class="benefits-icon">
                   <use href="./img/sprite.svg#clock"></use>
                 </svg>
@@ -187,7 +182,7 @@
             </li>
 
             <li class="benefits-list-item items-set">
-              <div class="benefits-icon-thumb" aria-label="Diagram icon">
+              <div class="benefits-icon-thumb">
                 <svg class="benefits-icon">
                   <use href="./img/sprite.svg#diagram"></use>
                 </svg>
@@ -201,7 +196,7 @@
 
             <li class="benefits-list-item items-set">
               <div class="benefits-icon-thumb">
-                <svg class="benefits-icon" aria-label="Astronaut icon">
+                <svg class="benefits-icon">
                   <use href="./img/sprite.svg#astronaut"></use>
                 </svg>
               </div>
@@ -781,13 +776,13 @@
     <!-- Модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button" data-modal-close>
-          <svg
-            class="cross-icon"
-            width="8"
-            height="8"
-            aria-label="Close modal button"
-          >
+        <button
+          class="close-btn"
+          type="button"
+          aria-label="Close modal button"
+          data-modal-close
+        >
+          <svg class="cross-icon" width="8" height="8">
             <use href="./img/sprite.svg#close"></use>
           </svg>
         </button>
@@ -798,7 +793,7 @@
         <form class="modal-form" name="modal-form" autocomplete="on">
           <label class="modal-label">
             <span class="modal-label-txt">Name</span>
-            <div class="modal-input-thumb">
+            <span class="modal-input-thumb">
               <input
                 class="modal-input required"
                 type="text"
@@ -808,27 +803,27 @@
               <svg class="modal-label-icon">
                 <use href="./img/sprite.svg#person"></use>
               </svg>
-            </div>
+            </span>
           </label>
 
           <label class="modal-label">
             <span class="modal-label-txt">Phone</span>
-            <div class="modal-input-thumb">
+            <span class="modal-input-thumb">
               <input
                 class="modal-input required"
-                type="phone"
+                type="number"
                 name="phone-numb"
                 placeholder=" "
               />
               <svg class="modal-label-icon">
                 <use href="./img/sprite.svg#phone"></use>
               </svg>
-            </div>
+            </span>
           </label>
 
           <label class="modal-label">
             <span class="modal-label-txt">Email</span>
-            <div class="modal-input-thumb">
+            <span class="modal-input-thumb">
               <input
                 class="modal-input required"
                 type="email"
@@ -838,7 +833,7 @@
               <svg class="modal-label-icon">
                 <use href="./img/sprite.svg#email"></use>
               </svg>
-            </div>
+            </span>
           </label>
 
           <label class="modal-label">
