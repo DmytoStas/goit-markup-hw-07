@@ -1,6 +1,6 @@
 .nav {
 
-    @include mediaMax(767px) {
+    @include mediaMax(767.98px) {
     margin-bottom: auto;
     }
     @include mediaMin(768px) {
@@ -17,7 +17,7 @@
     display: flex;
     letter-spacing: 0.02em;
 
-    @include mediaMax(767px) {
+    @include mediaMax(767.98px) {
         flex-direction: column;
         row-gap: 40px;
     

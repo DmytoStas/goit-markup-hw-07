@@ -2,7 +2,7 @@
     background-color: var(--second-light-bg-cl);
 
     @include mediaMin(768px) {
-        @include mediaMax(1199px) {
+        @include mediaMax(1199.98px) {
             padding-bottom: 104px;
         }
     }
@@ -29,13 +29,13 @@
         0 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0 0 4px 4px;
 
-    @include mediaMax(767px) {
+    @include mediaMax(767.98px) {
         margin-right: auto;
         margin-left: auto;
     }
 
     &:not(:last-child) {
-        @include mediaMax(767px) {
+        @include mediaMax(767.98px) {
             margin-bottom: 72px;
         }
     }

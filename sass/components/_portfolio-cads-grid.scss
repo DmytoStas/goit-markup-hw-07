@@ -1,11 +1,11 @@
-@include mediaMax(767px) {
+@include mediaMax(767.98px) {
     .card:not(:last-child) {
         margin-bottom: 48px;
     }
 }
 
 .cards-list {
-    @include mediaMax(1199px) {
+    @include mediaMax(1199.98px) {
         row-gap: 72px;
     }
 

@@ -56,13 +56,13 @@
   line-height: 1.33;
   letter-spacing: 0.04em;
 }
-@media only screen and (max-width: 427px) {
+@media screen and (max-width: 427.98px) {
   .modal-checkbox-link, .modal-checkbox-txt, .modal-label-txt {
     font-size: 10px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .cards-set {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -147,7 +147,7 @@ textarea:focus {
   padding-top: 96px;
   padding-bottom: 96px;
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -200,17 +200,17 @@ textarea:focus {
   padding-right: 15px;
   padding-left: 15px;
 }
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 428px) {
   .container {
     width: 428px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
   }
@@ -280,13 +280,13 @@ textarea:focus {
   text-transform: uppercase;
   line-height: 1.33;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .logo {
     padding-top: 24px;
     padding-bottom: 22px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .logo {
     padding-top: 24px;
     padding-bottom: 28px;
@@ -295,13 +295,13 @@ textarea:focus {
 .logo-accent {
   color: var(--main-dark-txt-cl);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .logo {
     line-height: 1.17;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .open-menu-btn {
     color: inherit;
     border: none;
@@ -314,7 +314,7 @@ textarea:focus {
     stroke: currentColor;
   }
   .menu-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
@@ -341,17 +341,17 @@ textarea:focus {
             transform: translateX(0);
   }
 }
-@media only screen and (max-width: 767px) and (min-width: 480px) {
+@media screen and (max-width: 767.98px) and (min-width: 480px) {
   .menu-container {
     width: 428px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .menu-container.is-open .close-btn {
     opacity: 1;
   }
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .menu-container .close-btn {
     position: absolute;
     top: 40px;
@@ -361,18 +361,18 @@ textarea:focus {
     transition: opacity var(--trans-properties) 250ms;
   }
 }
-@media only screen and (max-width: 767px) and (max-width: 427px) {
+@media screen and (max-width: 767.98px) and (max-width: 427.98px) {
   .menu-container .soc-media {
     gap: 26px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .menu-container .soc-media-icon {
     width: 24px;
     height: 24px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .open-menu-btn {
     display: none;
   }
@@ -407,7 +407,7 @@ textarea:focus {
     background-image: var(--hero-bg-gradient), url(../img/hero_bg/mobile/hero-bg_mobile_856@2x.jpg);
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero {
     height: 436px;
     max-width: 100%;
@@ -420,7 +420,7 @@ textarea:focus {
     background-image: var(--hero-bg-gradient), url(../img/hero_bg/tablet/hero-bg_tablet_1536@2x.jpg);
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
     width: 1440px;
@@ -436,12 +436,12 @@ textarea:focus {
   padding-top: 112px;
   padding-bottom: 112px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero.section {
     padding-bottom: 108px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero.section {
     padding-top: 188px;
     padding-bottom: 188px;
@@ -457,7 +457,7 @@ textarea:focus {
   letter-spacing: 0.02em;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero-title {
     max-width: 496px;
     margin-bottom: 40px;
@@ -465,13 +465,13 @@ textarea:focus {
     line-height: 1.07;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .hero-title {
     margin-bottom: 48px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .benefits {
     padding-bottom: 0;
   }
@@ -480,7 +480,7 @@ textarea:focus {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .benefits-icon-thumb {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -506,13 +506,13 @@ textarea:focus {
   line-height: 1.11;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .benefits .section-subtitle {
     letter-spacing: 0.02em;
     text-align: start;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .benefits .section-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -523,7 +523,7 @@ textarea:focus {
 .benefits .section-descr {
   font-weight: 500;
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .benefits .section-descr {
     font-weight: normal;
   }
@@ -532,13 +532,13 @@ textarea:focus {
 .benefits-list-item:not(:last-child) {
   margin-bottom: 72px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .benefits-list-item:not(:last-child) {
     margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .benefits-list {
     -webkit-column-gap: 24px;
        -moz-column-gap: 24px;
@@ -546,7 +546,7 @@ textarea:focus {
     row-gap: 72px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .benefits-list {
     --items: 4;
     -ms-flex-wrap: nowrap;
@@ -555,7 +555,7 @@ textarea:focus {
   }
 }
 
-@media only screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .service {
     display: none;
   }
@@ -569,13 +569,13 @@ textarea:focus {
 .team {
   background-color: var(--second-light-bg-cl);
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .team {
     padding-bottom: 104px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .team-list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -583,7 +583,7 @@ textarea:focus {
     row-gap: 64px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team-list {
     --items: 4;
     -webkit-box-pack: start;
@@ -601,13 +601,13 @@ textarea:focus {
           box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0 0 4px 4px;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .team-list-item {
     margin-right: auto;
     margin-left: auto;
   }
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .team-list-item:not(:last-child) {
     margin-bottom: 72px;
   }
@@ -630,7 +630,7 @@ textarea:focus {
           column-gap: var(--main-gap);
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .mobile-cards-set {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -644,7 +644,7 @@ textarea:focus {
         flex-basis: calc((100% - 16px) / 2);
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .customers-list {
     --items: 3;
     -webkit-box-pack: center;
@@ -660,7 +660,7 @@ textarea:focus {
 .customers-list-item {
   height: 88px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .customers-list-item {
     max-width: 168px;
   }
@@ -693,7 +693,7 @@ textarea:focus {
   fill: currentColor;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .subscr-form-elements {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -750,7 +750,7 @@ textarea:focus {
 .email-input:focus {
   border-color: var(--primary-brand);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .email-input {
     width: 264px;
     margin-bottom: 0;
@@ -771,20 +771,20 @@ textarea:focus {
   margin-left: 16px;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .portfolio.section {
     padding-top: 48px;
     padding-bottom: 48px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .portfolio.section {
     padding-top: 96px;
     padding-bottom: 96px;
     padding-top: 64px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .portfolio.section {
     padding-top: 96px;
     padding-bottom: 120px;
@@ -823,7 +823,7 @@ textarea:focus {
   row-gap: 16px;
   margin-bottom: 48px;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .filters-list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -831,23 +831,23 @@ textarea:focus {
     margin-bottom: 64px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .filters-list {
     margin-bottom: 72px;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .card:not(:last-child) {
     margin-bottom: 48px;
   }
 }
-@media only screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .cards-list {
     row-gap: 72px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .cards-list {
     --items: 3;
   }
@@ -875,7 +875,7 @@ textarea:focus {
 .card-overlay {
   display: none;
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .card-overlay {
     position: absolute;
     top: 100%;
@@ -929,7 +929,7 @@ textarea:focus {
   -webkit-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
           box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .header {
     height: 76px;
   }
@@ -939,7 +939,7 @@ textarea:focus {
   margin-right: auto;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .header-container {
     position: relative;
     display: -webkit-box;
@@ -954,7 +954,7 @@ textarea:focus {
     height: 100%;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -966,18 +966,18 @@ textarea:focus {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .nav {
     margin-bottom: auto;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav {
     height: 100%;
     margin-right: 118px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .nav {
     margin-right: 332px;
   }
@@ -989,7 +989,7 @@ textarea:focus {
   display: flex;
   letter-spacing: 0.02em;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .nav-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1002,7 +1002,7 @@ textarea:focus {
     line-height: 1.11;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav-list {
     height: 100%;
     -webkit-box-orient: horizontal;
@@ -1026,7 +1026,7 @@ textarea:focus {
 .current-link {
   color: var(--hover-bg);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .current-link::after {
     content: "";
     position: absolute;
@@ -1044,14 +1044,14 @@ textarea:focus {
   -webkit-transition: color var(--trans-properties);
   transition: color var(--trans-properties);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav-list-link {
     height: 100%;
     padding-top: 24px;
     padding-bottom: 22px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .nav-list-link {
     padding-bottom: 28px;
   }
@@ -1064,7 +1064,7 @@ textarea:focus {
   color: var(--hover-bg);
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .address {
     margin-bottom: 48px;
   }
@@ -1092,12 +1092,12 @@ textarea:focus {
     line-height: 1.11;
   }
 }
-@media only screen and (max-width: 767px) and (max-width: 427px) {
+@media screen and (max-width: 767.98px) and (max-width: 427.98px) {
   .address-link-mob-iris {
     font-size: 25px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .address-list {
     color: var(--second-dark-txt-cl);
     font-size: 12px;
@@ -1105,7 +1105,7 @@ textarea:focus {
     letter-spacing: 0.04em;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .address-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1123,7 +1123,7 @@ textarea:focus {
   -webkit-transition: color var(--trans-properties);
   transition: color var(--trans-properties);
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .address-list-link {
     display: block;
     height: 100%;
@@ -1138,26 +1138,26 @@ textarea:focus {
   text-align: center;
   background: var(--main-dark-txt-cl);
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer {
     text-align: left;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1172,14 +1172,14 @@ textarea:focus {
 .footer-descr-container {
   max-width: 264px;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .footer-descr-container {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .footer-descr-container {
     margin-right: 120px;
   }
@@ -1211,12 +1211,12 @@ textarea:focus {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .soc-media-container {
     margin-bottom: 72px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .soc-media-container {
     margin-right: auto;
   }
@@ -1268,7 +1268,7 @@ textarea:focus {
   letter-spacing: 0.02em;
   text-align: center;
 }
-@media only screen and (max-width: 427px) {
+@media screen and (max-width: 427.98px) {
   .modal-title {
     font-size: 14px;
   }
@@ -1298,7 +1298,7 @@ textarea:focus {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
 }
-@media only screen and (max-width: 427px) {
+@media screen and (max-width: 427.98px) {
   .modal {
     width: 95%;
   }

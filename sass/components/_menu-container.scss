@@ -1,4 +1,4 @@
-@include mediaMax(767px) {
+@include mediaMax(767.98px) {
     .open-menu-btn {
         color: inherit;
 
@@ -15,7 +15,7 @@
     }
 
     .menu-container {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 999;
@@ -55,7 +55,7 @@
     }
 
     .menu-container .soc-media{
-        @include mediaMax(427px) {
+        @include mediaMax(427.98px) {
             gap: 26px;
         }
     }

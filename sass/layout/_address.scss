@@ -1,4 +1,4 @@
-@include mediaMax(767px) {
+@include mediaMax(767.98px) {
     .address {
         margin-bottom: 48px;
     }
@@ -18,7 +18,7 @@
     }
 
     .address-link-mob-iris {
-        @include mediaMax(427px) {
+        @include mediaMax(427.98px) {
             font-size: 25px;
         }
 

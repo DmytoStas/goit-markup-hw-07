@@ -1,7 +1,7 @@
 .container {
 	@include container();
 	
-	@include mediaMin(480px) {
+	@include mediaMin(428px) {
 		width: 428px;
 	}
 

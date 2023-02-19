@@ -1,10 +1,10 @@
 .portfolio.section {
-    @include mediaMax(767px) {
+    @include mediaMax(767.98px) {
         @include section(48px);
     }
 
     @include mediaMin(768px) {
-        @include mediaMax(1199px) {
+        @include mediaMax(1199.98px) {
             @include section();
             padding-top: 64px;
         }

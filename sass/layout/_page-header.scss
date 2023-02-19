@@ -16,7 +16,10 @@
 }
 
 .header-container {
-	@include mediaMax(767px) {
+	// @include mediaMin(428.98px) {
+	// 	width: 428px;
+	// }
+	@include mediaMax(767.98px) {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
